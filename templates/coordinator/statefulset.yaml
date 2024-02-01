@@ -50,9 +50,7 @@ spec:
             - '--server.authentication=true'
             - '--server.jwt-secret-keyfile={{ include "arangodb.jwtSecret.path" . }}'
             - '--database.directory=/data'
-            {{- if .Values.coordinator.clusterMinReplicationFactor }}
             - '--cluster.min-replication-factor={{ .Values.coordinator.clusterMinReplicationFactor }}'
-            {{- end }}
             {{- if .Values.coordinator.logLevel }}
             - '--log.level={{ .Values.coordinator.logLevel }}'
             {{- end }}

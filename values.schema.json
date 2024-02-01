@@ -11,6 +11,14 @@
         "single"
       ]
     },
+    "coordinator": {
+      "type": "object",
+      "properties": {
+        "clusterMinReplicationFactor": {
+          "type": "integer"
+        }
+      }
+    },
     "auth": {
       "type": "object",
       "properties": {
